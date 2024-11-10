@@ -1,0 +1,63 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: lightgray;
+}
+
+h1 {
+    text-align: center;
+}
+
+div[class^="shadow"] {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3rem;
+    width: 400px;
+    padding-block: 20px;
+
+    margin-inline: auto;
+    margin-block: 35px;
+    background-color: #fff;
+
+    p {
+        width: 330px;
+        text-align: center;
+    }
+}
+
+/*  */
+.shadow-1 {
+    box-shadow: 5px 5px 0px 0px #666; 
+}
+
+.shadow-2 {
+    box-shadow: 5px 5px 0px 0px #00f,
+                -5px -5px 0px 0px #f62,
+                10px 10px 0px 0px rgb(231, 0, 0);
+}
+
+.shadow-3 {
+    box-shadow: 8px 8px 12px 0px #666;
+}
+
+.shadow-4 {
+    box-shadow: 7px 7px 5px 11px #666;
+}
+
+.shadow-5 {
+    box-shadow: inset 5px 5px 10px 0px #666;
+}
+
+.shadow-6 {
+    box-shadow: inset 3px 3px 6px 0px rgb(178, 209, 0),
+                inset -3px -3px 6px 0px rgb(82, 200, 255),
+                3px 3px 6px 0px rgb(178, 209, 0),
+                -3px -3px 6px 0px rgb(82, 200, 255),
+                0px 0px 10px 8px #fff;
+}
+
