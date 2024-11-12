@@ -1,3 +1,7 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -5,11 +9,23 @@
 }
 
 body {
-    background-color: lightgray;
+    background-color: rgb(253, 255, 223);
 }
 
-h1 {
+h1, h2, h3, h4 {
     text-align: center;
+    font-family: Comfortaa, Helvetica, sans-serif;
+}
+
+div {
+    padding: 20px 10px;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
 }
 
 div[class^="shadow"] {
@@ -17,12 +33,14 @@ div[class^="shadow"] {
     justify-content: center;
     align-items: center;
     font-size: 1.3rem;
-    width: 400px;
-    padding-block: 20px;
+    width: 450px;
+    height: 200px;
 
     margin-inline: auto;
     margin-block: 35px;
     background-color: #fff;
+
+    border: 1px solid #c9c9c9;
 
     p {
         width: 330px;
@@ -59,5 +77,106 @@ div[class^="shadow"] {
                 3px 3px 6px 0px rgb(178, 209, 0),
                 -3px -3px 6px 0px rgb(82, 200, 255),
                 0px 0px 10px 8px #fff;
+    border-radius: 10px;
 }
 
+div[class^="text-shadow"] {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3rem;
+    width: 450px;
+    height: 200px;
+
+    margin-inline: auto;
+    margin-block: 35px;
+    background-color: #fff;
+
+    border: 1px solid #c9c9c9;
+}
+
+.text-shadow-1 {
+    text-shadow: 3px 3px 0px rgb(35, 207, 0);
+}
+
+.text-shadow-2 {
+    text-shadow: 7px 7px 0px rgb(35, 207, 0),
+                 -7px -7px 0px rgb(248, 34, 255);
+}
+
+.text-shadow-3 {
+    text-shadow: 5px 5px 5px rgb(82, 0, 136);
+}
+
+.text-shadow-4 {
+    text-shadow: 3px -3px 6px rgb(0, 96, 151),
+                 -3px 3px 6px rgb(248, 34, 255);
+}
+
+.text-shadow-5 {
+    color: transparent;
+    text-shadow: 3px 3px 6px rgb(192, 0, 0);
+}
+
+div[class^="linear-gradient"] {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3rem;
+    width: 450px;
+    height: 200px;
+
+    margin-inline: auto;
+    margin-block: 35px;
+    background-color: #fff;
+
+    border: 1px solid #c9c9c9;
+}
+
+.linear-gradient-1 {
+    background: linear-gradient(#4beb00, #f62);
+    /* Если не указывать направление, то градиент будет иметь 
+    направление сверху вниз */
+}
+
+.linear-gradient-2 {
+    background: linear-gradient(to left, #a927ca, rgb(228, 83, 0));
+    /* Можно задавать направление градиента несколькими способами:
+    1) to top, to bottom, to left, to right
+    2) в градусах, например 45deg
+    3) в оборотах, например 0.25turn - это четверть полного оборота, или 90 градусов*/
+}
+
+.linear-gradient-3 {
+    background: linear-gradient(45deg, #00a761, #1b004d);
+    /* 0deg - снизу вверх, и далее по часовой, 
+    например 90deg это справо налево*/
+
+    p {color:aliceblue;}
+}
+
+.linear-gradient-4 {
+    background: linear-gradient(to right, #1c009b, #00b91f, #fd2f2f,
+                                          #8e009b, #00b91f, #fd2f2f);
+    /* Можно также использовать несколько цветов*/
+
+    p {color:aliceblue;}
+}
+
+.linear-gradient-5 {
+    background: linear-gradient(70deg, #ff3c00 70%, #43ff1e);
+    /* Здесь 70 процентов пространства занимает красный цвет
+    и оставшееся пространство остается для второго цвета и 
+    для плавного перехода от одного цвета на другой*/
+
+    p {color:aliceblue;}
+}
+
+.linear-gradient-6 {
+    background: linear-gradient(70deg, #00f 0% 50%, #f00 50% 100%);
+    /* Здесь 50 процентов пространства занимает синий цвет
+    и оставшиеся 50 процентов занимает красный цвет.
+    Получается что для перехода меж цветами нет места*/
+
+    p {color:aliceblue;}
+}
