@@ -8,6 +8,7 @@
     box-sizing: border-box;
 }
 
+
 body {
     background-color: rgb(253, 255, 223);
 }
@@ -48,27 +49,33 @@ div[class^="shadow"] {
     }
 }
 
-/*  */
+/* Задание 1 - Тени для контейнеров ----------------------------- */
+
 .shadow-1 {
     box-shadow: 5px 5px 0px 0px #666; 
+    /* Тень без размытия и распростронения */
 }
 
 .shadow-2 {
     box-shadow: 5px 5px 0px 0px #00f,
                 -5px -5px 0px 0px #f62,
                 10px 10px 0px 0px rgb(231, 0, 0);
+    /* Можно задать несколько теней на один контейнер */
 }
 
 .shadow-3 {
     box-shadow: 8px 8px 12px 0px #666;
+    /* Здесь тень размыта */
 }
 
 .shadow-4 {
     box-shadow: 7px 7px 5px 11px #666;
+    /* Здесь тень размыта и имеет увеличенный радиус распространения */
 }
 
 .shadow-5 {
     box-shadow: inset 5px 5px 10px 0px #666;
+    /* Значение "inset" задает тень внутри контейнера */
 }
 
 .shadow-6 {
@@ -78,6 +85,8 @@ div[class^="shadow"] {
                 -3px -3px 6px 0px rgb(82, 200, 255),
                 0px 0px 10px 8px #fff;
     border-radius: 10px;
+    /* Здесь мы пытались добится эффекта свечения контейнера по 
+    краям за счет ярких теней */
 }
 
 div[class^="text-shadow"] {
@@ -95,27 +104,35 @@ div[class^="text-shadow"] {
     border: 1px solid #c9c9c9;
 }
 
+/* Задание 2 - Тени для текста ----------------------------------- */
+
 .text-shadow-1 {
     text-shadow: 3px 3px 0px rgb(35, 207, 0);
+    /* Тень под текстом без размытия */
 }
 
 .text-shadow-2 {
     text-shadow: 7px 7px 0px rgb(35, 207, 0),
                  -7px -7px 0px rgb(248, 34, 255);
+    /* Задаем несколько теней под одним текстом */
 }
 
 .text-shadow-3 {
     text-shadow: 5px 5px 5px rgb(82, 0, 136);
+    /* Здесь мы добавляем размытие тени */
 }
 
 .text-shadow-4 {
     text-shadow: 3px -3px 6px rgb(0, 96, 151),
                  -3px 3px 6px rgb(248, 34, 255);
+    /* Создаем эффект свечения текста за счет ярких теней */
 }
 
 .text-shadow-5 {
     color: transparent;
     text-shadow: 3px 3px 6px rgb(192, 0, 0);
+    /* Если сделать текст прозрачным, то его тень сохранит все свои свойства.
+    Тем самым можно добиться эффекта размытого текста. */
 }
 
 div[class^="linear-gradient"] {
@@ -132,6 +149,8 @@ div[class^="linear-gradient"] {
 
     border: 1px solid #c9c9c9;
 }
+
+/* Задание 3 - Линейный градиент для фона контейнера */
 
 .linear-gradient-1 {
     background: linear-gradient(#4beb00, #f62);
@@ -179,4 +198,62 @@ div[class^="linear-gradient"] {
     Получается что для перехода меж цветами нет места*/
 
     p {color:aliceblue;}
+}
+
+
+div[class^="radial-gradient"] {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3rem;
+    width: 500px;
+    height: 450px;
+
+    margin-inline: auto;
+    margin-block: 35px;
+    background-color: #fff;
+
+    border: 1px solid #c9c9c9;
+}
+
+/* Задание 4 - радиальный градиент для фона контейнера */
+
+.radial-gradient-1 {
+    background: radial-gradient(rgb(225, 241, 0),rgb(0, 137, 179));
+    /* Самый простой радиальный градиент. Переход начинается с центра */
+}
+
+.radial-gradient-2 {
+    background: radial-gradient(#00c02a,#b30000, #00f, #1beb00);
+    /* Можно добавить еще цветов в градиент */
+}
+
+.radial-gradient-3 {
+    background: radial-gradient(ellipse 45% 65%, #00c02a,#b30000, #00f, #1beb00);
+    /* Есть два вида радиального градиента это круг и эллипс:
+    1. Circle
+    2. Ellipse 
+    */
+}
+
+.radial-gradient-4 {
+    background: radial-gradient(#b30000 55%, #1beb00);
+    /* Можно задать больше пространства для цвета указав это в 
+    процентном соотношении. Здесь красный цвет занимает 55% пространства
+    начиная от центра, далее идет переход цвета на зеленый */
+}
+
+.radial-gradient-5 {
+    background: radial-gradient(closest-side at 60% 55%, blue, green, yellow, black);
+    /* Можно задать расположение цента через "at"
+    Используйте для этого "top", "bottom", "left", "right"
+    Также можно задать точно место центра через пиксели, проценты или 
+    через другие единицы. 
+    */
+}
+
+.radial-gradient-6 {
+    background: radial-gradient(ellipse at top, #8d0000, transparent),
+                radial-gradient(ellipse at bottom, #3ea4f8, transparent);
+    /* Также можно задать несколько градиентов для одного контейнера */
 }
